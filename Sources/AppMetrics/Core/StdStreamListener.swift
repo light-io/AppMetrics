@@ -48,8 +48,10 @@ final class StdStreamListener {
     stdoutPipe.fileHandleForReading.waitForDataInBackgroundAndNotify()
 
     stdoutObserver = notificationCenter.addObserver(
-      forName: NSNotification.Name.NSFileHandleDataAvailable, object: stdoutPipe.fileHandleForReading , queue: nil
-    ) { [weak self] notification in
+      forName: NSNotification.Name.NSFileHandleDataAvailable,
+      object: stdoutPipe.fileHandleForReading,
+      queue: nil
+    ) { [weak self] _ in
       guard let output = self?.stdoutPipe.fileHandleForReading.availableData else { return }
       let outputString = String(data: output, encoding: String.Encoding.utf8) ?? ""
       self?.stdEventsSubject.send(StdEvent(message: outputString, timestamp: .now))

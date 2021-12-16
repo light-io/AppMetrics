@@ -58,9 +58,7 @@ struct AppMetricsView_Previews: PreviewProvider {
           "test log message, long error message, test log message, long error message test"
         )
         AppMetricsView_Previews.logger.fault("test log fault")
-        print("print input")
       }
   }
 }
 #endif
-
