@@ -11,7 +11,6 @@
 		11561EAD276B6C8400E044ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11561EAC276B6C8400E044ED /* ContentView.swift */; };
 		11561EAF276B6C8600E044ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11561EAE276B6C8600E044ED /* Assets.xcassets */; };
 		11561EB2276B6C8600E044ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11561EB1276B6C8600E044ED /* Preview Assets.xcassets */; };
-		1192E67A276B83EF0035B061 /* AppMetricsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1192E679276B83EF0035B061 /* AppMetricsKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +19,6 @@
 		11561EAC276B6C8400E044ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11561EAE276B6C8600E044ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11561EB1276B6C8600E044ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		11A2CA69276B88CB0026289D /* AppMetrics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppMetrics; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,7 +26,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1192E67A276B83EF0035B061 /* AppMetricsKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,7 +36,6 @@
 			isa = PBXGroup;
 			children = (
 				11561EA9276B6C8400E044ED /* DemoApp */,
-				11A2CA68276B88CB0026289D /* Packages */,
 				11561EA8276B6C8400E044ED /* Products */,
 				11561EBC276B6E0B00E044ED /* Frameworks */,
 			);
@@ -79,14 +75,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		11A2CA68276B88CB0026289D /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				11A2CA69276B88CB0026289D /* AppMetrics */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,7 +93,6 @@
 			);
 			name = DemoApp;
 			packageProductDependencies = (
-				1192E679276B83EF0035B061 /* AppMetricsKit */,
 			);
 			productName = DemoApp;
 			productReference = 11561EA7276B6C8400E044ED /* DemoApp.app */;
@@ -173,7 +160,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  echo \"Run linting\"\n  swiftlint --config \"$SRCROOT/.swiftlint.yml\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi \n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  echo \"Run linting\"\n  swiftlint --config \"$SRCROOT/../.swiftlint.yml\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi \n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -386,13 +373,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1192E679276B83EF0035B061 /* AppMetricsKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AppMetricsKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11561E9F276B6C8400E044ED /* Project object */;
 }

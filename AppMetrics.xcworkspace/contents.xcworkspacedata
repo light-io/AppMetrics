@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:"
+      name = "Deployment">
+      <FileRef
+         location = "group:Package.swift">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:AppMetrics.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DemoApp/DemoApp.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -4,20 +4,22 @@
 //
 
 import SwiftUI
-import AppMetrics
-import AppMetricsKit
+//import AppMetrics
+//import AppMetricsKit
 
 struct ContentView: View {
-  private let logger = AppLogger(subsystem: "DemoApp", category: "MainView")
+//  private let logger = AppLogger(subsystem: "DemoApp", category: "MainView")
 
   var body: some View {
-    AppMetricsView()
-      .padding()
-      .onAppear(perform: onAppear)
+    Text("hello")
+
+//    AppMetricsView()
+//      .padding()
+//      .onAppear(perform: onAppear)
   }
 
   private func onAppear() {
-    logger.debug("on appear")
+//    logger.debug("on appear")
   }
 }
 
