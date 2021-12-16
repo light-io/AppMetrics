@@ -20,7 +20,7 @@
 		11561EAC276B6C8400E044ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11561EAE276B6C8600E044ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11561EB1276B6C8600E044ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1192E677276B83A70035B061 /* AppMetrics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AppMetrics; sourceTree = SOURCE_ROOT; };
+		11A2CA69276B88CB0026289D /* AppMetrics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppMetrics; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			isa = PBXGroup;
 			children = (
 				11561EA9276B6C8400E044ED /* DemoApp */,
-				1192E677276B83A70035B061 /* AppMetrics */,
+				11A2CA68276B88CB0026289D /* Packages */,
 				11561EA8276B6C8400E044ED /* Products */,
 				11561EBC276B6E0B00E044ED /* Frameworks */,
 			);
@@ -77,6 +77,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11A2CA68276B88CB0026289D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				11A2CA69276B88CB0026289D /* AppMetrics */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
