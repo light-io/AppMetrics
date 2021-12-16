@@ -55,4 +55,3 @@ struct MetricEventCell: View {
     .padding([.leading, .trailing], 0)
   }
 }
-
