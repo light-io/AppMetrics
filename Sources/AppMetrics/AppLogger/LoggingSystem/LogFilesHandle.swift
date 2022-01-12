@@ -53,7 +53,7 @@ final class LogFilesHandle {
 
   private func readFullFile(fileHandle: FileHandle) throws -> [AppLogger.Message] {
     try fileHandle.seek(toOffset: 0)
-    guard let data = try fileHandle.readToEnd()§ else { return [] }
+    guard let data = try fileHandle.readToEnd() else { return [] }
     return logFileParser.parse(data)?.messages ?? []
   }
 }

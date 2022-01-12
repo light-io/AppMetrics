@@ -6,7 +6,7 @@
 import SwiftUI
 import AppMetrics
 
-struct MetricEventCell: View {
+struct LogCell: View {
   let viewModel: ViewModel
 
   private var backgroundColor: Color {
@@ -14,16 +14,18 @@ struct MetricEventCell: View {
   }
 
   var body: some View {
-    VStack(alignment: .trailing, spacing: 0) {
+    VStack(alignment: .trailing, spacing: 5) {
       infoPanel
-        .frame(maxWidth: .infinity, maxHeight: 40)
+        .frame(maxWidth: .infinity)
         .background(Color.clear)
       messagePanel
         .background(Color.clear)
     }
-    .frame(maxWidth: .infinity, maxHeight: 300)
+    .padding(5)
+    .frame(maxWidth: .infinity)
     .foregroundColor(Color.white)
     .background(backgroundColor)
+    .font(.footnote)
   }
 
   // MARK: - ViewBuilders
@@ -31,17 +33,17 @@ struct MetricEventCell: View {
   @ViewBuilder
   private var infoPanel: some View {
     HStack {
-      Image(systemName: "clock").font(Font.body.bold()).foregroundColor(Color.white)
-      Text(viewModel.timestamp)
+      Image(systemName: "clock").font(Font.footnote.bold()).foregroundColor(Color.blue)
+      Text(viewModel.date)
       Spacer()
-      levelBadge
+      levelBadge.font(.footnote.bold())
     }.padding(0)
   }
 
   @ViewBuilder
   private var messagePanel: some View {
     HStack(alignment: .top) {
-      Text(viewModel.message).fixedSize(horizontal: false, vertical: true)
+      Text(viewModel.logMessage.message).fixedSize(horizontal: false, vertical: true)
       Spacer()
     }.padding(0)
   }
@@ -49,7 +51,7 @@ struct MetricEventCell: View {
   @ViewBuilder
   private var levelBadge: some View {
     HStack {
-      Text(viewModel.eventTypeInfo)
+      Text(viewModel.logMessage.level.description)
     }
     .padding([.top, .bottom], 0)
     .padding([.leading, .trailing], 0)

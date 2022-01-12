@@ -27,11 +27,11 @@
 		11A2CAD1276B935F0026289D /* CommonUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 11A2CAD0276B935F0026289D /* CommonUtils */; };
 		11A2CADF276B93E70026289D /* AppMetrics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A2CA76276B927F0026289D /* AppMetrics.framework */; };
 		11A2CAE0276B93E70026289D /* AppMetrics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11A2CA76276B927F0026289D /* AppMetrics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		11A2CAE5276B94370026289D /* MetricEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAA5276B92FD0026289D /* MetricEventCell.swift */; };
-		11A2CAE6276B943B0026289D /* AppMetricsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAA6276B92FD0026289D /* AppMetricsViewPresenter.swift */; };
+		11A2CAE5276B94370026289D /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAA5276B92FD0026289D /* LogCell.swift */; };
+		11A2CAE6276B943B0026289D /* LogsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAA6276B92FD0026289D /* LogsViewPresenter.swift */; };
 		11A2CAE8276B94450026289D /* CommonUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 11A2CAE7276B94450026289D /* CommonUtils */; };
-		11A2CAE9276B945D0026289D /* AppMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAA7276B92FD0026289D /* AppMetricsView.swift */; };
-		11A2CAEA276B94610026289D /* MetricEventCell+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAA8276B92FD0026289D /* MetricEventCell+ViewModel.swift */; };
+		11A2CAE9276B945D0026289D /* LogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAA7276B92FD0026289D /* LogsView.swift */; };
+		11A2CAEA276B94610026289D /* LogCell+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAA8276B92FD0026289D /* LogCell+ViewModel.swift */; };
 		11E91A062779C522005537AD /* LogMessageCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E91A052779C522005537AD /* LogMessageCoder.swift */; };
 		11F5417C277B026900EEC3E6 /* LogFilesHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F5417B277B026900EEC3E6 /* LogFilesHandle.swift */; };
 		11F5417F277B069A00EEC3E6 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F5417E277B069A00EEC3E6 /* FileManager.swift */; };
@@ -67,10 +67,10 @@
 		111F25DC2775BA29006D65D8 /* MicrosecondPrecisionDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrosecondPrecisionDateFormatter.swift; sourceTree = "<group>"; };
 		111F25E12775CA9F006D65D8 /* LogsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsProvider.swift; sourceTree = "<group>"; };
 		11A2CA76276B927F0026289D /* AppMetrics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppMetrics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		11A2CAA5276B92FD0026289D /* MetricEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricEventCell.swift; sourceTree = "<group>"; };
-		11A2CAA6276B92FD0026289D /* AppMetricsViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMetricsViewPresenter.swift; sourceTree = "<group>"; };
-		11A2CAA7276B92FD0026289D /* AppMetricsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMetricsView.swift; sourceTree = "<group>"; };
-		11A2CAA8276B92FD0026289D /* MetricEventCell+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MetricEventCell+ViewModel.swift"; sourceTree = "<group>"; };
+		11A2CAA5276B92FD0026289D /* LogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
+		11A2CAA6276B92FD0026289D /* LogsViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsViewPresenter.swift; sourceTree = "<group>"; };
+		11A2CAA7276B92FD0026289D /* LogsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsView.swift; sourceTree = "<group>"; };
+		11A2CAA8276B92FD0026289D /* LogCell+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogCell+ViewModel.swift"; sourceTree = "<group>"; };
 		11A2CAAA276B92FD0026289D /* Benchmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Benchmark.swift; sourceTree = "<group>"; };
 		11A2CAAC276B92FD0026289D /* StdStreamListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StdStreamListener.swift; sourceTree = "<group>"; };
 		11A2CAAD276B92FD0026289D /* FileSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
@@ -158,20 +158,20 @@
 		11A2CAA3276B92FD0026289D /* AppMetricsKit */ = {
 			isa = PBXGroup;
 			children = (
-				11A2CAA4276B92FD0026289D /* AppMetricsView */,
+				11A2CAA4276B92FD0026289D /* LogsView */,
 			);
 			path = AppMetricsKit;
 			sourceTree = "<group>";
 		};
-		11A2CAA4276B92FD0026289D /* AppMetricsView */ = {
+		11A2CAA4276B92FD0026289D /* LogsView */ = {
 			isa = PBXGroup;
 			children = (
-				11A2CAA5276B92FD0026289D /* MetricEventCell.swift */,
-				11A2CAA6276B92FD0026289D /* AppMetricsViewPresenter.swift */,
-				11A2CAA7276B92FD0026289D /* AppMetricsView.swift */,
-				11A2CAA8276B92FD0026289D /* MetricEventCell+ViewModel.swift */,
+				11A2CAA5276B92FD0026289D /* LogCell.swift */,
+				11A2CAA6276B92FD0026289D /* LogsViewPresenter.swift */,
+				11A2CAA7276B92FD0026289D /* LogsView.swift */,
+				11A2CAA8276B92FD0026289D /* LogCell+ViewModel.swift */,
 			);
-			path = AppMetricsView;
+			path = LogsView;
 			sourceTree = "<group>";
 		};
 		11A2CAA9276B92FD0026289D /* AppMetrics */ = {
@@ -395,10 +395,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11A2CAE9276B945D0026289D /* AppMetricsView.swift in Sources */,
-				11A2CAE5276B94370026289D /* MetricEventCell.swift in Sources */,
-				11A2CAE6276B943B0026289D /* AppMetricsViewPresenter.swift in Sources */,
-				11A2CAEA276B94610026289D /* MetricEventCell+ViewModel.swift in Sources */,
+				11A2CAE9276B945D0026289D /* LogsView.swift in Sources */,
+				11A2CAE5276B94370026289D /* LogCell.swift in Sources */,
+				11A2CAE6276B943B0026289D /* LogsViewPresenter.swift in Sources */,
+				11A2CAEA276B94610026289D /* LogCell+ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

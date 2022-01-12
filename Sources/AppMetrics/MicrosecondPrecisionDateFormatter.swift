@@ -7,22 +7,31 @@ import Foundation
 
 // TODO: - Move to CommonUtils
 
-public final class MicrosecondPrecisionDateFormatter {
+public final class MicrosecondPrecisionDateFormatter: DateFormatter {
+//  private let microsecondsPrefix = "."
+  private let defaultDateFormat = "yyyy-MM-dd'T'HH:mm:ss"
 
-  public var dateFormat: String = "yyyy-MM-dd'T'HH:mm:ss"
+  // MARK: - Methods
 
-  private let dateFormatter = DateFormatter()
-  private let microsecondsPrefix = "."
+  public override init() {
+    super.init()
+    dateFormat = defaultDateFormat
+  }
 
-  public func string(from date: Date) -> String? {
-    let components = dateFormatter.calendar.dateComponents(Set([Calendar.Component.nanosecond]), from: date)
+  @available(*, unavailable)
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
+  public func stringWithMicroseconds(from date: Date) -> String? {
+    let components = calendar.dateComponents(Set([Calendar.Component.nanosecond]), from: date)
     guard let nanosecond = components.nanosecond else { return nil }
     let nanosecondsInMicrosecond = Double(1_000)
     let microseconds = lrint(Double(nanosecond) / nanosecondsInMicrosecond)
-    guard let updatedDate = dateFormatter.calendar.date(byAdding: .nanosecond, value: -nanosecond, to: date) else {
+    guard let updatedDate = calendar.date(byAdding: .nanosecond, value: -nanosecond, to: date) else {
       return nil
     }
-    dateFormatter.dateFormat = "\(dateFormat)'.\(microseconds)'Z"
-    return dateFormatter.string(from: updatedDate)
+    dateFormat = "\(dateFormat ?? defaultDateFormat)'.\(microseconds)'Z"
+    return string(from: updatedDate)
   }
 }

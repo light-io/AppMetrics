@@ -6,9 +6,9 @@
 import SwiftUI
 import AppMetrics
 
-public struct AppMetricsView: View {
-  @StateObject private var presenter = AppMetricsViewPresenter(
-    eventsProvider: MetricsManager.shared
+public struct LogsView: View {
+  @StateObject private var presenter = LogsViewPresenter(
+    logsProvider: LoggingSystem.shared
   )
 
   public init() { }
@@ -26,9 +26,9 @@ public struct AppMetricsView: View {
   @ViewBuilder
   private var logsView: some View {
     ScrollView {
-      LazyVStack(spacing: 10) {
-        ForEach(presenter.events, id: \.id) {
-          MetricEventCell(viewModel: $0).background(Color.clear)
+      LazyVStack(spacing: 0) {
+        ForEach(presenter.logMessages, id: \.id) {
+          LogCell(viewModel: $0).background(Color.clear)
         }
       }
     }
@@ -38,9 +38,7 @@ public struct AppMetricsView: View {
 
   // MARK: - Private methods
 
-  private func onAppear() {
-    presenter.loadEvents()
-  }
+  private func onAppear() { }
 }
 
 #if DEBUG
@@ -48,7 +46,7 @@ struct AppMetricsView_Previews: PreviewProvider {
   private static let logger = AppLogger(subsystem: "AppMetricsKit", category: "AppMetricsView_Previews")
 
   static var previews: some View {
-    AppMetricsView()
+    LogsView()
       .previewLayout(.fixed(width: 400, height: 500))
       .onAppear {
         MetricsManager.shared.enableStdStreamInterception()
