@@ -6,13 +6,13 @@
 import Foundation
 
 public enum MetricsEvent {
-  case log(_ log: LogMessage)
+  case log(_ log: AppLogger.Message)
   case stdstream(_ event: StdEvent)
 
   public var timestamp: Date {
     switch self {
     case let .log(logMessage):
-      return logMessage.timestamp
+      return logMessage.date
     case let .stdstream(event):
       return event.timestamp
     }

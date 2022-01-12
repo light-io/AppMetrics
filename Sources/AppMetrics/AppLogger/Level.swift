@@ -6,15 +6,17 @@
 import Foundation
 import OSLog
 
-public enum LogLevel: Int {
-  case debug
-  case warning
-  case info
-  case error
-  case fault
+public extension AppLogger {
+  enum Level: Int {
+    case debug
+    case warning
+    case info
+    case error
+    case fault
+  }
 }
 
-extension LogLevel {
+extension AppLogger.Level {
   var type: OSLogType {
     switch self {
     case .debug:
@@ -31,7 +33,7 @@ extension LogLevel {
   }
 }
 
-extension LogLevel: CustomStringConvertible {
+extension AppLogger.Level: CustomStringConvertible {
   public var description: String {
     switch self {
     case .debug:
@@ -48,10 +50,10 @@ extension LogLevel: CustomStringConvertible {
   }
 }
 
-extension LogLevel: Codable { }
+extension AppLogger.Level: Codable { }
 
-extension LogLevel: Comparable {
-  public static func < (lhs: LogLevel, rhs: LogLevel) -> Bool {
+extension AppLogger.Level: Comparable {
+  public static func < (lhs: Self, rhs: Self) -> Bool {
     lhs.rawValue < rhs.rawValue
   }
 }

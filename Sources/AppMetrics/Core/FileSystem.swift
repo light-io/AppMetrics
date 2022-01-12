@@ -4,39 +4,85 @@
 //
 
 import Foundation
+import CommonUtils
 
-final class FileSystem: FileSystemManager {
-  private let decoder = JSONDecoder()
-  private let encoder = JSONEncoder()
+final class FileSystem {
+  enum Extension: String {
+    case log
+  }
+
+  static let shared = FileSystem()
+
+  private(set) lazy var metricsDirectory = baseDirectory.appendingPathComponent("AppMetrics", isDirectory: true)
+  private(set) lazy var logsDirectory = metricsDirectory.appendingPathComponent("Logs", isDirectory: true)
+
   private let fileManager: FileManager = .default
   private var baseDirectory: URL {
     do {
-      return try fileManager.url(for: .libraryDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+      return try fileManager.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
     } catch {
       fatalError(error.localizedDescription)
     }
   }
 
-  private lazy var metricsDirectory: URL = baseDirectory.appendingPathComponent("Metrics", isDirectory: true)
+  // MARK: - Methods
+
+  func getFileSize(atPath path: String) throws -> UInt64? {
+    try fileManager.fileSize(atPath: path)
+  }
+
+  // MARK: - Working with logs
+
+  func createLogFile(withName name: String) -> URL {
+    let url = logsDirectory
+      .appendingPathComponent(name, isDirectory: false)
+      .appendingPathExtension("log")
+    if !fileManager.fileExists(atPath: url.path) {
+      fileManager.createFile(atPath: url.path, contents: nil, attributes: nil)
+    }
+    return url
+  }
+
+  // MARK: - Refactor
+
+  enum File: String {
+    case metricsInfo = "metrics_info"
+  }
+
+  var isAppMetricsDirectoryExists: Bool {
+    var isDir: ObjCBool = true
+    return fileManager.fileExists(atPath: metricsDirectory.path, isDirectory: &isDir)
+  }
+
+  var isLogsDirectoryExists: Bool {
+    var isDir: ObjCBool = true
+    return fileManager.fileExists(atPath: logsDirectory.path, isDirectory: &isDir)
+  }
+
+  var logsFileURL: URL {
+    logsDirectory
+      .appendingPathComponent("logs", isDirectory: false)
+      .appendingPathExtension("log")
+  }
 
   // MARK: - Methods
 
-  init() {
-    prepare()
-  }
+  init() { }
 
-  func save(_ events: [MetricsEvent]) {
-    Thread.assertIsBackground()
-//    let data = encoder.encode(<#T##value: Encodable##Encodable#>)
-  }
-
-  // MARK: - Private methods
-
-  private func prepare() {
-    do {
-      try fileManager.createDirectory(at: metricsDirectory, withIntermediateDirectories: true, attributes: nil)
-    } catch {
-      fatalError(error.localizedDescription)
+  func prepare() {
+    if !isAppMetricsDirectoryExists {
+      do {
+        try fileManager.createDirectory(at: metricsDirectory, withIntermediateDirectories: true, attributes: nil)
+      } catch {
+        fatalError(error.localizedDescription)
+      }
+    }
+    if !isLogsDirectoryExists {
+      do {
+        try fileManager.createDirectory(at: logsDirectory, withIntermediateDirectories: true, attributes: nil)
+      } catch {
+        fatalError(error.localizedDescription)
+      }
     }
   }
 }

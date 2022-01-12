@@ -5,4 +5,6 @@
 
 import Foundation
 
-protocol FileSystemManager: AnyObject { }
+protocol LogWriter {
+  func write(_ message: AppLogger.Message)
+}

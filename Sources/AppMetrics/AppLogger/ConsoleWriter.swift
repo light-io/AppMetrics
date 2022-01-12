@@ -7,10 +7,10 @@ import Foundation
 import OSLog
 
 struct ConsoleWriter: LogWriter {
-  func log(_ message: LogMessage) {
+  func write(_ message: AppLogger.Message) {
     os_log(
-      message.logLevel.type,
-      log: .init(subsystem: "\(message.subsystem)", category: "\(message.category)"),
+      message.level.type,
+      log: .init(subsystem: "\(message.metadata.subsystem)", category: "\(message.metadata.category)"),
       "%{public}s",
       "\(message)"
     )

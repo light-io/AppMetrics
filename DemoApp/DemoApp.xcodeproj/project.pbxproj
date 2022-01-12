@@ -11,7 +11,27 @@
 		11561EAD276B6C8400E044ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11561EAC276B6C8400E044ED /* ContentView.swift */; };
 		11561EAF276B6C8600E044ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11561EAE276B6C8600E044ED /* Assets.xcassets */; };
 		11561EB2276B6C8600E044ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11561EB1276B6C8600E044ED /* Preview Assets.xcassets */; };
+		11A2CAF0276CA45F0026289D /* AppMetricsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A2CAEF276CA45F0026289D /* AppMetricsKit.framework */; };
+		11A2CAF1276CA45F0026289D /* AppMetricsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11A2CAEF276CA45F0026289D /* AppMetricsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		11A2CAF4276CA48A0026289D /* AppMetrics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A2CAF3276CA48A0026289D /* AppMetrics.framework */; };
+		11A2CAF5276CA48A0026289D /* AppMetrics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 11A2CAF3276CA48A0026289D /* AppMetrics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		11A2CAF8276CA51F0026289D /* CommonUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 11A2CAF7276CA51F0026289D /* CommonUtils */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		11A2CAF2276CA45F0026289D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				11A2CAF5276CA48A0026289D /* AppMetrics.framework in Embed Frameworks */,
+				11A2CAF1276CA45F0026289D /* AppMetricsKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		11561EA7276B6C8400E044ED /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +39,8 @@
 		11561EAC276B6C8400E044ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11561EAE276B6C8600E044ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11561EB1276B6C8600E044ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		11A2CAEF276CA45F0026289D /* AppMetricsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppMetricsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11A2CAF3276CA48A0026289D /* AppMetrics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppMetrics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A2CAF8276CA51F0026289D /* CommonUtils in Frameworks */,
+				11A2CAF4276CA48A0026289D /* AppMetrics.framework in Frameworks */,
+				11A2CAF0276CA45F0026289D /* AppMetricsKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +96,8 @@
 		11561EBC276B6E0B00E044ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11A2CAF3276CA48A0026289D /* AppMetrics.framework */,
+				11A2CAEF276CA45F0026289D /* AppMetricsKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -86,6 +113,7 @@
 				11561EA3276B6C8400E044ED /* Sources */,
 				11561EA4276B6C8400E044ED /* Frameworks */,
 				11561EA5276B6C8400E044ED /* Resources */,
+				11A2CAF2276CA45F0026289D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -93,6 +121,7 @@
 			);
 			name = DemoApp;
 			packageProductDependencies = (
+				11A2CAF7276CA51F0026289D /* CommonUtils */,
 			);
 			productName = DemoApp;
 			productReference = 11561EA7276B6C8400E044ED /* DemoApp.app */;
@@ -122,6 +151,9 @@
 				Base,
 			);
 			mainGroup = 11561E9E276B6C8400E044ED;
+			packageReferences = (
+				11A2CAF6276CA51F0026289D /* XCRemoteSwiftPackageReference "CommonUtils" */,
+			);
 			productRefGroup = 11561EA8276B6C8400E044ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -301,7 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DemoApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KTK2682S7D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -330,7 +362,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DemoApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KTK2682S7D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -373,6 +405,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		11A2CAF6276CA51F0026289D /* XCRemoteSwiftPackageReference "CommonUtils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/light-io/CommonUtils.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		11A2CAF7276CA51F0026289D /* CommonUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11A2CAF6276CA51F0026289D /* XCRemoteSwiftPackageReference "CommonUtils" */;
+			productName = CommonUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11561E9F276B6C8400E044ED /* Project object */;
 }

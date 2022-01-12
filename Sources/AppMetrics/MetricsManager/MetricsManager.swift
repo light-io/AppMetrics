@@ -14,46 +14,38 @@ public final class MetricsManager: MetricsEventsProvider {
     newEventsSubject.eraseToAnyPublisher()
   }
 
-  private let fileSystem: FileSystemManager
-  private let maxPoolSize: Int = 10
-  private var eventspool: [MetricsEvent] = []
+  @Atomic public var isSaveEventsToFile = true
+  public private(set) var metricsInfo = MetricsInfo(numberOfInits: 0)
+
+  private let fileSystem: FileSystem
   private let newEventsSubject = PassthroughSubject<MetricsEvent, Never>()
   private let queue: DispatchQueue
   private var stdStreamListener: StdStreamListener?
+  private let notificationCenter: NotificationCenter
   private let cancellableBag = CancellableBag()
 
   // MARK: - Methods
 
   init(
-    fileSystem: FileSystemManager = FileSystem(),
+    fileSystem: FileSystem = FileSystem(),
+    notificationCenter: NotificationCenter = .default,
     queue: DispatchQueue = DispatchQueue("com.AppMetrics.MetricsManager", type: .concurrent, qos: .default)
   ) {
     self.fileSystem = fileSystem
+    self.notificationCenter = notificationCenter
     self.queue = queue
+//    fileSystem.prepare()
+//    updateMetricsInfo()
   }
 
   public func enableStdStreamInterception() {
     guard stdStreamListener.isNil else { return }
     stdStreamListener = StdStreamListener()
-    stdStreamListener?.stdEventsPublisher
-      .sink { [weak self] in
-        self?.write(.stdstream($0))
-      }
-      .store(in: cancellableBag)
   }
 
   public func fetchEvents() async -> [MetricsEvent] {
     await withUnsafeContinuation { continuation in
-      queue.async { [self] in
-        continuation.resume(returning: eventspool)
-      }
-    }
-  }
-
-  func write(_ event: MetricsEvent) {
-    queue.async(flags: [.barrier]) { [self] in
-      eventspool.append(event)
-      newEventsSubject.send(event)
+      continuation.resume(returning: [])
     }
   }
 }

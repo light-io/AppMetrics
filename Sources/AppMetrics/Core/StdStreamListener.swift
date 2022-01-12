@@ -7,7 +7,7 @@ import Foundation
 import Combine
 import CommonUtils
 
-public struct StdEvent {
+public struct StdEvent: Codable {
   public let message: String
   public let timestamp: Date
 }

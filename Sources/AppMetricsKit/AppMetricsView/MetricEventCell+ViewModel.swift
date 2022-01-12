@@ -31,7 +31,7 @@ extension MetricEventCell {
     var eventTypeInfo: String {
       switch event {
       case let .log(logMessage):
-        return logMessage.logLevel.description
+        return logMessage.level.description
       case .stdstream:
         return "stdout"
       }

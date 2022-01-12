@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110CC47E2774B1B9006163BC /* MetricsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CC47D2774B1B9006163BC /* MetricsInfo.swift */; };
+		1111C6A1278C6C4200E5BC87 /* LogFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111C6A0278C6C4200E5BC87 /* LogFileParser.swift */; };
+		111F25DD2775BA29006D65D8 /* MicrosecondPrecisionDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F25DC2775BA29006D65D8 /* MicrosecondPrecisionDateFormatter.swift */; };
+		111F25E22775CA9F006D65D8 /* LogsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F25E12775CA9F006D65D8 /* LogsProvider.swift */; };
 		11A2CAC0276B92FD0026289D /* Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAAA276B92FD0026289D /* Benchmark.swift */; };
 		11A2CAC1276B92FD0026289D /* StdStreamListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAAC276B92FD0026289D /* StdStreamListener.swift */; };
 		11A2CAC2276B92FD0026289D /* FileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAAD276B92FD0026289D /* FileSystem.swift */; };
-		11A2CAC3276B92FD0026289D /* FileSystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAAE276B92FD0026289D /* FileSystemManager.swift */; };
 		11A2CAC4276B92FD0026289D /* ConsoleWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAB0276B92FD0026289D /* ConsoleWriter.swift */; };
-		11A2CAC5276B92FD0026289D /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAB1276B92FD0026289D /* LogLevel.swift */; };
+		11A2CAC5276B92FD0026289D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAB1276B92FD0026289D /* Level.swift */; };
 		11A2CAC6276B92FD0026289D /* LogWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAB2276B92FD0026289D /* LogWriter.swift */; };
-		11A2CAC7276B92FD0026289D /* LogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAB3276B92FD0026289D /* LogMessage.swift */; };
+		11A2CAC7276B92FD0026289D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAB3276B92FD0026289D /* Message.swift */; };
 		11A2CAC8276B92FD0026289D /* LoggingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAB4276B92FD0026289D /* LoggingSystem.swift */; };
 		11A2CAC9276B92FD0026289D /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAB5276B92FD0026289D /* AppLogger.swift */; };
 		11A2CACA276B92FD0026289D /* MetricsEventsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAB7276B92FD0026289D /* MetricsEventsProvider.swift */; };
-		11A2CACB276B92FD0026289D /* MetricsManager+LogWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAB8276B92FD0026289D /* MetricsManager+LogWriter.swift */; };
 		11A2CACC276B92FD0026289D /* MetricsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAB9276B92FD0026289D /* MetricsManager.swift */; };
 		11A2CACD276B92FD0026289D /* MetricsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CABA276B92FD0026289D /* MetricsEvent.swift */; };
 		11A2CACE276B92FD0026289D /* RateCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CABB276B92FD0026289D /* RateCounter.swift */; };
@@ -30,6 +32,9 @@
 		11A2CAE8276B94450026289D /* CommonUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 11A2CAE7276B94450026289D /* CommonUtils */; };
 		11A2CAE9276B945D0026289D /* AppMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAA7276B92FD0026289D /* AppMetricsView.swift */; };
 		11A2CAEA276B94610026289D /* MetricEventCell+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2CAA8276B92FD0026289D /* MetricEventCell+ViewModel.swift */; };
+		11E91A062779C522005537AD /* LogMessageCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E91A052779C522005537AD /* LogMessageCoder.swift */; };
+		11F5417C277B026900EEC3E6 /* LogFilesHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F5417B277B026900EEC3E6 /* LogFilesHandle.swift */; };
+		11F5417F277B069A00EEC3E6 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F5417E277B069A00EEC3E6 /* FileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		110CC47D2774B1B9006163BC /* MetricsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsInfo.swift; sourceTree = "<group>"; };
+		1111C6A0278C6C4200E5BC87 /* LogFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFileParser.swift; sourceTree = "<group>"; };
+		111F25DC2775BA29006D65D8 /* MicrosecondPrecisionDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrosecondPrecisionDateFormatter.swift; sourceTree = "<group>"; };
+		111F25E12775CA9F006D65D8 /* LogsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsProvider.swift; sourceTree = "<group>"; };
 		11A2CA76276B927F0026289D /* AppMetrics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppMetrics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A2CAA5276B92FD0026289D /* MetricEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricEventCell.swift; sourceTree = "<group>"; };
 		11A2CAA6276B92FD0026289D /* AppMetricsViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMetricsViewPresenter.swift; sourceTree = "<group>"; };
@@ -65,21 +74,22 @@
 		11A2CAAA276B92FD0026289D /* Benchmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Benchmark.swift; sourceTree = "<group>"; };
 		11A2CAAC276B92FD0026289D /* StdStreamListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StdStreamListener.swift; sourceTree = "<group>"; };
 		11A2CAAD276B92FD0026289D /* FileSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
-		11A2CAAE276B92FD0026289D /* FileSystemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemManager.swift; sourceTree = "<group>"; };
 		11A2CAB0276B92FD0026289D /* ConsoleWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleWriter.swift; sourceTree = "<group>"; };
-		11A2CAB1276B92FD0026289D /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
+		11A2CAB1276B92FD0026289D /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		11A2CAB2276B92FD0026289D /* LogWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogWriter.swift; sourceTree = "<group>"; };
-		11A2CAB3276B92FD0026289D /* LogMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMessage.swift; sourceTree = "<group>"; };
+		11A2CAB3276B92FD0026289D /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		11A2CAB4276B92FD0026289D /* LoggingSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingSystem.swift; sourceTree = "<group>"; };
 		11A2CAB5276B92FD0026289D /* AppLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
 		11A2CAB7276B92FD0026289D /* MetricsEventsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricsEventsProvider.swift; sourceTree = "<group>"; };
-		11A2CAB8276B92FD0026289D /* MetricsManager+LogWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MetricsManager+LogWriter.swift"; sourceTree = "<group>"; };
 		11A2CAB9276B92FD0026289D /* MetricsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricsManager.swift; sourceTree = "<group>"; };
 		11A2CABA276B92FD0026289D /* MetricsEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricsEvent.swift; sourceTree = "<group>"; };
 		11A2CABB276B92FD0026289D /* RateCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateCounter.swift; sourceTree = "<group>"; };
 		11A2CAD7276B93C70026289D /* AppMetricsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppMetricsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A2CAED276B956C0026289D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		11A2CAEE276B956C0026289D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		11E91A052779C522005537AD /* LogMessageCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMessageCoder.swift; sourceTree = "<group>"; };
+		11F5417B277B026900EEC3E6 /* LogFilesHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFilesHandle.swift; sourceTree = "<group>"; };
+		11F5417E277B069A00EEC3E6 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		111F25DE2775C78C006D65D8 /* LoggingSystem */ = {
+			isa = PBXGroup;
+			children = (
+				1111C6A0278C6C4200E5BC87 /* LogFileParser.swift */,
+				11A2CAB4276B92FD0026289D /* LoggingSystem.swift */,
+				111F25E12775CA9F006D65D8 /* LogsProvider.swift */,
+				11E91A052779C522005537AD /* LogMessageCoder.swift */,
+				11F5417B277B026900EEC3E6 /* LogFilesHandle.swift */,
+			);
+			path = LoggingSystem;
+			sourceTree = "<group>";
+		};
 		11A2CA6C276B927F0026289D = {
 			isa = PBXGroup;
 			children = (
@@ -155,11 +177,12 @@
 		11A2CAA9276B92FD0026289D /* AppMetrics */ = {
 			isa = PBXGroup;
 			children = (
+				111F25DC2775BA29006D65D8 /* MicrosecondPrecisionDateFormatter.swift */,
+				11A2CABB276B92FD0026289D /* RateCounter.swift */,
 				11A2CAAA276B92FD0026289D /* Benchmark.swift */,
 				11A2CAAB276B92FD0026289D /* Core */,
-				11A2CAAF276B92FD0026289D /* Logger */,
+				11A2CAAF276B92FD0026289D /* AppLogger */,
 				11A2CAB6276B92FD0026289D /* MetricsManager */,
-				11A2CABB276B92FD0026289D /* RateCounter.swift */,
 			);
 			path = AppMetrics;
 			sourceTree = "<group>";
@@ -167,31 +190,31 @@
 		11A2CAAB276B92FD0026289D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				11F5417D277B069000EEC3E6 /* Extensions */,
 				11A2CAAC276B92FD0026289D /* StdStreamListener.swift */,
 				11A2CAAD276B92FD0026289D /* FileSystem.swift */,
-				11A2CAAE276B92FD0026289D /* FileSystemManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		11A2CAAF276B92FD0026289D /* Logger */ = {
+		11A2CAAF276B92FD0026289D /* AppLogger */ = {
 			isa = PBXGroup;
 			children = (
-				11A2CAB0276B92FD0026289D /* ConsoleWriter.swift */,
-				11A2CAB1276B92FD0026289D /* LogLevel.swift */,
-				11A2CAB2276B92FD0026289D /* LogWriter.swift */,
-				11A2CAB3276B92FD0026289D /* LogMessage.swift */,
-				11A2CAB4276B92FD0026289D /* LoggingSystem.swift */,
+				111F25DE2775C78C006D65D8 /* LoggingSystem */,
 				11A2CAB5276B92FD0026289D /* AppLogger.swift */,
+				11A2CAB1276B92FD0026289D /* Level.swift */,
+				11A2CAB3276B92FD0026289D /* Message.swift */,
+				11A2CAB0276B92FD0026289D /* ConsoleWriter.swift */,
+				11A2CAB2276B92FD0026289D /* LogWriter.swift */,
 			);
-			path = Logger;
+			path = AppLogger;
 			sourceTree = "<group>";
 		};
 		11A2CAB6276B92FD0026289D /* MetricsManager */ = {
 			isa = PBXGroup;
 			children = (
+				110CC47D2774B1B9006163BC /* MetricsInfo.swift */,
 				11A2CAB7276B92FD0026289D /* MetricsEventsProvider.swift */,
-				11A2CAB8276B92FD0026289D /* MetricsManager+LogWriter.swift */,
 				11A2CAB9276B92FD0026289D /* MetricsManager.swift */,
 				11A2CABA276B92FD0026289D /* MetricsEvent.swift */,
 			);
@@ -210,6 +233,14 @@
 			children = (
 			);
 			name = Deployment;
+			sourceTree = "<group>";
+		};
+		11F5417D277B069000EEC3E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11F5417E277B069A00EEC3E6 /* FileManager.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +267,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11A2CA7D276B927F0026289D /* Build configuration list for PBXNativeTarget "AppMetrics" */;
 			buildPhases = (
-				11A2CAEB276B94930026289D /* Run SwiftLint */,
 				11A2CA71276B927F0026289D /* Headers */,
 				11A2CA72276B927F0026289D /* Sources */,
 				11A2CA73276B927F0026289D /* Frameworks */,
@@ -258,7 +288,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11A2CADB276B93C70026289D /* Build configuration list for PBXNativeTarget "AppMetricsKit" */;
 			buildPhases = (
-				11A2CAEC276B94B60026289D /* Run SwiftLint */,
 				11A2CAD2276B93C70026289D /* Headers */,
 				11A2CAD3276B93C70026289D /* Sources */,
 				11A2CAD4276B93C70026289D /* Frameworks */,
@@ -334,65 +363,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		11A2CAEB276B94930026289D /* Run SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run SwiftLint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  echo \"Run linting\"\n  swiftlint --config \"$SRCROOT/.swiftlint.yml\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi \n";
-		};
-		11A2CAEC276B94B60026289D /* Run SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run SwiftLint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  echo \"Run linting\"\n  swiftlint --config \"$SRCROOT/.swiftlint.yml\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi \n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		11A2CA72276B927F0026289D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				11A2CACD276B92FD0026289D /* MetricsEvent.swift in Sources */,
+				1111C6A1278C6C4200E5BC87 /* LogFileParser.swift in Sources */,
+				11E91A062779C522005537AD /* LogMessageCoder.swift in Sources */,
 				11A2CAC2276B92FD0026289D /* FileSystem.swift in Sources */,
-				11A2CAC3276B92FD0026289D /* FileSystemManager.swift in Sources */,
 				11A2CACE276B92FD0026289D /* RateCounter.swift in Sources */,
+				11F5417C277B026900EEC3E6 /* LogFilesHandle.swift in Sources */,
 				11A2CAC6276B92FD0026289D /* LogWriter.swift in Sources */,
-				11A2CAC5276B92FD0026289D /* LogLevel.swift in Sources */,
-				11A2CACB276B92FD0026289D /* MetricsManager+LogWriter.swift in Sources */,
+				111F25E22775CA9F006D65D8 /* LogsProvider.swift in Sources */,
+				11A2CAC5276B92FD0026289D /* Level.swift in Sources */,
 				11A2CACA276B92FD0026289D /* MetricsEventsProvider.swift in Sources */,
 				11A2CAC9276B92FD0026289D /* AppLogger.swift in Sources */,
 				11A2CAC0276B92FD0026289D /* Benchmark.swift in Sources */,
-				11A2CAC7276B92FD0026289D /* LogMessage.swift in Sources */,
+				11A2CAC7276B92FD0026289D /* Message.swift in Sources */,
 				11A2CAC4276B92FD0026289D /* ConsoleWriter.swift in Sources */,
 				11A2CACC276B92FD0026289D /* MetricsManager.swift in Sources */,
+				11F5417F277B069A00EEC3E6 /* FileManager.swift in Sources */,
 				11A2CAC8276B92FD0026289D /* LoggingSystem.swift in Sources */,
+				111F25DD2775BA29006D65D8 /* MicrosecondPrecisionDateFormatter.swift in Sources */,
 				11A2CAC1276B92FD0026289D /* StdStreamListener.swift in Sources */,
+				110CC47E2774B1B9006163BC /* MetricsInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

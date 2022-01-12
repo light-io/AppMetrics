@@ -7,9 +7,17 @@ import Foundation
 
 public enum Benchmark {
   public static func measure(_ work: () -> Void) -> TimeInterval {
-    let begin = ProcessInfo.processInfo.systemUptime
+    var info = mach_timebase_info()
+    guard mach_timebase_info(&info) == KERN_SUCCESS else { return -1 }
+
+    let start = mach_absolute_time()
     work()
-    return ProcessInfo.processInfo.systemUptime - begin
+    let end = mach_absolute_time()
+
+    let elapsed = end - start
+
+    let nanos = elapsed * UInt64(info.numer) / UInt64(info.denom)
+    return TimeInterval(nanos) / TimeInterval(NSEC_PER_SEC)
   }
 
   @inline(__always)

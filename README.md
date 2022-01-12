@@ -7,4 +7,4 @@
 
 Package inlude:
  - AppLogger
- - MetriksUI
+ - MetricsUI
